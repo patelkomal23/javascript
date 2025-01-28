@@ -17,7 +17,7 @@ text.innerText = "Lorem ipsum dolor sit amet consectetur";
 // console.log(`Hello, ${user}!`);
 
 let p = document.createElement("p");
-p.textContent = "This is a new paragraph.";
+p.textContent = "This is a new paragraph....";
 document.body.appendChild(p);
 
 let data = [{ name: "komal", age: 23 }, { name: "payal", age: 20 }];
