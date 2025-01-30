@@ -10,6 +10,7 @@ console.log("Division: "+ a/b);
 console.log("Exponetional:"+ a**2);
 
 
+
 p=200;
 q='200';
 
