@@ -115,14 +115,63 @@ let spending = 500;
 
 if (member) {
     if (spending > 100) {
-        console.log("Amount is: "+ spending + " You get a 20% discount.");
+        console.log("Amount is: " + spending + " You get a 20% discount.");
     }
     else {
-        console.log("Amount is: "+ spending + " You get a 10% discount.");
+        console.log("Amount is: " + spending + " You get a 10% discount.");
     }
-}else {
+} else {
     console.log("No discount available for non-members.");
 
-    
+
 }
 // Program 9: Check if a string is empty
+
+let str = "";
+if (str === "") {
+    console.log("String is empty");
+
+}
+else {
+    console.log("String is not empty");
+}
+// Program 10: Determine if a year is a leap year
+
+let year = 2004;
+
+if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+    console.log("year: " + year + " is a leap year.");
+} else {
+    console.log("year: " + year + " is not a leap year.");
+}
+// Program 11: Check if both numbers are positive using nested if
+let x = 10;
+let y = -20;
+
+if (x > 0) {
+    if (y > 0) {
+        console.log("x: " + x + " &" + " y: " + y + " Both numbers are positive.");
+    }
+    else {
+        console.log("x: " + x + "is Positive" + " y: " + y + " but y is not positive")
+    }
+} else {
+    console.log("x: " + x + " x is not positive.");
+}
+// Program 12: Determine the season based on the month (1-12)
+let month = 11;
+let season = "";
+if (month === 12 || month === 1 || month === 2) {
+    season = "Winter";
+} else if (month >= 3 && month <= 5) {
+    season = "Summer";
+} else if (month >= 6 && month <= 8) {
+    season = "monsoon";
+} else if (month >= 9 && month <= 11) {
+    season = "pankhar";
+} else {
+    season = "Invalid month";
+}
+console.log("Month " + month + " is in " + season + ".");
+
+// Program 13: Check if a person is eligible to vote based on age and citizenship
