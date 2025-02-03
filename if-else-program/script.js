@@ -189,3 +189,11 @@ if (age >= 20) {
 } else {
     console.log("You are not old enough to vote.");
 }
+// Program 14: Check if a password meets the minimum length requirement
+let pwd = "komal5575"
+
+if (pwd >= 5) {
+    console.log("Password is acceptable.");
+} else {
+    console.log("Password must be at least 8 characters long.");
+}
