@@ -62,6 +62,6 @@ if(user==="komal"){
     }
 }
 else{
-    console.log("Know user");
+    console.log("unknow user");
     
 }
