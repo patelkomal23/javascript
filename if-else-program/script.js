@@ -175,3 +175,17 @@ if (month === 12 || month === 1 || month === 2) {
 console.log("Month " + month + " is in " + season + ".");
 
 // Program 13: Check if a person is eligible to vote based on age and citizenship
+let age = 20;
+citizen = true;
+
+
+if (age >= 20) {
+    if (citizen) {
+        console.log("You are eligible to vote.");
+    } else {
+        console.log("You must be a citizen to vote.");
+
+    }
+} else {
+    console.log("You are not old enough to vote.");
+}
