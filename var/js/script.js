@@ -21,14 +21,3 @@ console.log("typeof valid " + typeof valid);
 console.log("typeof value:" + typeof value);
 console.log("typeof obj :" + typeof obj);
 
-
-
-// arithmetic operator
-let a=10;
-let b=5;
-
-console.log(a+b);
-console.log(a-b);
-console.log("Multiplication: "+ a*b);
-console.log("Division: "+ a/b);
-console.log("Exponetional:"+ a**2);

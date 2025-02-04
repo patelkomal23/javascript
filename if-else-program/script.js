@@ -212,3 +212,15 @@ if(per_age>=15){
 else{
     console.log("You are too young to watch this movie.");
 }
+// Program 16: Check if a number is prime
+
+
+// Program 19: Verify user login with username and password
+let inputUsername = "komal2332";
+let inputPassword = "k@5572";
+if (inputUsername === "komal2332" && inputPassword === "k@5572") {
+ console.log("User login successful.");
+} 
+else {
+ console.log("Invalid username or password.");
+}
