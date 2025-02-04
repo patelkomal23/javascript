@@ -215,6 +215,17 @@ else{
 // Program 16: Check if a number is prime
 
 
+// Program 17: Check if a number is within the range 10 to 20 (inclusive)
+let range = 12;
+if(range>=10 && range<=20){
+    console.log(range + " is within the range 10 to 20.");
+}
+else{
+    console.log(range + " is outside the range 10 to 20.");
+}
+// Program 18: Calculate the area based on the shape type
+
+
 // Program 19: Verify user login with username and password
 let inputUsername = "komal2332";
 let inputPassword = "k@5572";
@@ -224,3 +235,5 @@ if (inputUsername === "komal2332" && inputPassword === "k@5572") {
 else {
  console.log("Invalid username or password.");
 }
+
+// Program 20: Check if a person meets multiple conditions for a special offer
