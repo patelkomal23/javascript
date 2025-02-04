@@ -3,7 +3,8 @@ let num = 10;
 if (num > 0) {
     console.log("Number is Positive");
 
-} else {
+} 
+else {
     console.log("Number is Negative");
 
 }
@@ -12,7 +13,8 @@ let a = 8;
 if (a % 2 === 0) {
     console.log("Number is even");
 
-} else {
+} 
+else {
     console.log("Number is odd");
 
 }
@@ -70,9 +72,11 @@ let temp = 5;
 if (temp >= 30) {
     console.log("temperature: " + temp + " temperature is hot");
 
-} else if (temp >= 20) {
+} 
+else if (temp >= 20) {
     console.log("temperature: " + temp + " temperature is Warm");
-} else {
+} 
+else {
     console.log("temperature: " + temp + " temperature is cold");
 }
 // Program 7: Determine day of the week from a number (1 = Monday, 7 = Sunday)
@@ -120,10 +124,9 @@ if (member) {
     else {
         console.log("Amount is: " + spending + " You get a 10% discount.");
     }
-} else {
+} 
+else {
     console.log("No discount available for non-members.");
-
-
 }
 // Program 9: Check if a string is empty
 
@@ -141,7 +144,8 @@ let year = 2004;
 
 if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
     console.log("year: " + year + " is a leap year.");
-} else {
+} 
+else {
     console.log("year: " + year + " is not a leap year.");
 }
 // Program 11: Check if both numbers are positive using nested if
@@ -155,7 +159,8 @@ if (x > 0) {
     else {
         console.log("x: " + x + "is Positive" + " y: " + y + " but y is not positive")
     }
-} else {
+} 
+else {
     console.log("x: " + x + " x is not positive.");
 }
 // Program 12: Determine the season based on the month (1-12)
@@ -186,14 +191,24 @@ if (age >= 20) {
         console.log("You must be a citizen to vote.");
 
     }
-} else {
+} 
+else {
     console.log("You are not old enough to vote.");
 }
 // Program 14: Check if a password meets the minimum length requirement
-let pwd = "komal5575"
+let pwd = "k5575@";
 
-if (pwd >= 5) {
-    console.log("Password is acceptable.");
-} else {
+if (pwd.length >= 8) {
+    console.log("Password is valid.");
+}
+else {
     console.log("Password must be at least 8 characters long.");
+}
+// Program 15: Check if a person is eligible to watch a movie based on age
+let per_age = 20;
+if(per_age>=15){
+    console.log("You can watch this movie.");
+}
+else{
+    console.log("You are too young to watch this movie.");
 }
