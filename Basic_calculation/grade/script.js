@@ -1,9 +1,11 @@
 let avg = prompt("Enter marks:");
-console.log(avg);
+let grade;
 
-document.write(
-  avg >= 80 ? 'A' :
+grade = avg >= 80 ? 'A' :
   avg >= 60 ? 'B' :
   avg >= 50 ? 'C' :
-  'Pass'
-);
+  avg >= 40 ? 'D':
+  "Fail";
+  
+  console.log("Grade is " + grade);
+  
