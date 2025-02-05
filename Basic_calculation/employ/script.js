@@ -1,13 +1,13 @@
 let e_name = "Komal";
-let B_salary = 5000;
-let HRA = 100;
-let MA = 550;
-let TA = 300;
-let DA = 600;
+let B_salary = prompt("Enter Salary : ");
+let HRA = 0.50;
+let MA = 0.15;
+let TA = 0.8;
+let DA = 0.8;
 
-let PF = 100;
-let PT = 250;
-let TDS = 200;
+let PF = 0.12;
+let PT = 200;
+let TDS = 0.10;
 
 let gross = B_salary + HRA + MA + TA + DA;
 let net_salary = gross - PF - PT - TDS;

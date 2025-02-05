@@ -213,7 +213,23 @@ else{
     console.log("You are too young to watch this movie.");
 }
 // Program 16: Check if a number is prime
-
+let primeCandidate = 17;
+let isPrime = true;
+if (primeCandidate <= 1) {
+ isPrime = false;
+} else {
+ for (let i = 2; i < primeCandidate; i++) {
+ if (primeCandidate % i === 0) {
+ isPrime = false;
+ break;
+ }
+ }
+}
+if (isPrime) {
+ console.log(primeCandidate + " is a prime number.");
+} else {
+ console.log(primeCandidate + " is not a prime number.");
+}
 
 // Program 17: Check if a number is within the range 10 to 20 (inclusive)
 let range = 12;
@@ -224,6 +240,20 @@ else{
     console.log(range + " is outside the range 10 to 20.");
 }
 // Program 18: Calculate the area based on the shape type
+let shape = "circle";
+let area = 0;
+if (shape === "circle") {
+ let radius = 5;
+ area = Math.PI * radius * radius;
+ console.log("Area of the circle is: " + area.toFixed(2));
+} else if (shape === "rectangle") {
+ let length = 10;
+ let width = 4;
+ area = length * width;
+ console.log("Area of the rectangle is: " + area);
+} else {
+ console.log("Shape not recognized.");
+}
 
 
 // Program 19: Verify user login with username and password
@@ -236,4 +266,13 @@ else {
  console.log("Invalid username or password.");
 }
 
-// Program 20: Check if a person meets multiple conditions for a special offer
+// Program 20: Check if a person meets multiple conditions for a special
+offer
+let customer_age = 30;
+let member_sts = true;
+let purchase_amount = 250;
+if (customer_age >= 25 && member_sts && purchase_amount >= 200) {
+ console.log("Congratulations! You qualify for our special offer.");
+} else {
+ console.log("Sorry, you do not qualify for the special offer.");
+}
