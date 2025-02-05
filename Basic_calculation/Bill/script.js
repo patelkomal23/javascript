@@ -5,6 +5,7 @@ let p_price = 900;
 let total = p_qty * p_price;
 let discount = total >= 1500 ? 0.15 :
               total >= 1000 ? 0.10 :
+              
               total >= 800 ? 0.08 :
               0;
 
