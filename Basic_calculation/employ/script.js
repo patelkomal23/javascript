@@ -1,6 +1,6 @@
 let e_name = "komal";
 let B_salary = 20000;
-let HRA = B_salary * 0.050;
+let HRA = B_salary * 0.50;
 let MA = B_salary * 0.015;
 let DA = B_salary * 0.08;
 let TA = B_salary * 0.08;
