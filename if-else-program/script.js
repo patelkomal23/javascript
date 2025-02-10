@@ -3,7 +3,7 @@ let num = 10;
 if (num > 0) {
     console.log("Number is Positive");
 
-} 
+}
 else {
     console.log("Number is Negative");
 
@@ -13,7 +13,7 @@ let a = 8;
 if (a % 2 === 0) {
     console.log("Number is even");
 
-} 
+}
 else {
     console.log("Number is odd");
 
@@ -72,10 +72,10 @@ let temp = 5;
 if (temp >= 30) {
     console.log("temperature: " + temp + " temperature is hot");
 
-} 
+}
 else if (temp >= 20) {
     console.log("temperature: " + temp + " temperature is Warm");
-} 
+}
 else {
     console.log("temperature: " + temp + " temperature is cold");
 }
@@ -124,7 +124,7 @@ if (member) {
     else {
         console.log("Amount is: " + spending + " You get a 10% discount.");
     }
-} 
+}
 else {
     console.log("No discount available for non-members.");
 }
@@ -144,7 +144,7 @@ let year = 2004;
 
 if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
     console.log("year: " + year + " is a leap year.");
-} 
+}
 else {
     console.log("year: " + year + " is not a leap year.");
 }
@@ -159,7 +159,7 @@ if (x > 0) {
     else {
         console.log("x: " + x + "is Positive" + " y: " + y + " but y is not positive")
     }
-} 
+}
 else {
     console.log("x: " + x + " x is not positive.");
 }
@@ -191,7 +191,7 @@ if (age >= 20) {
         console.log("You must be a citizen to vote.");
 
     }
-} 
+}
 else {
     console.log("You are not old enough to vote.");
 }
@@ -206,73 +206,71 @@ else {
 }
 // Program 15: Check if a person is eligible to watch a movie based on age
 let per_age = 20;
-if(per_age>=15){
+if (per_age >= 15) {
     console.log("You can watch this movie.");
 }
-else{
+else {
     console.log("You are too young to watch this movie.");
 }
 // Program 16: Check if a number is prime
-let primeCandidate = 17;
-let isPrime = true;
-if (primeCandidate <= 1) {
- isPrime = false;
+let prime_num = 17;
+let prime = true;
+if (prime_num <= 1) {
+    prime = false;
 } else {
- for (let i = 2; i < primeCandidate; i++) {
- if (primeCandidate % i === 0) {
- isPrime = false;
- break;
- }
- }
+    for (let i = 2; i < prime_num; i++) {
+        if (prime_num % i === 0) {
+            prime = false;
+            break;
+        }
+    }
 }
-if (isPrime) {
- console.log(primeCandidate + " is a prime number.");
+if (prime) {
+    console.log(prime_num + " is a prime number.");
 } else {
- console.log(primeCandidate + " is not a prime number.");
+    console.log(prime_num + " is not a prime number.");
 }
 
 // Program 17: Check if a number is within the range 10 to 20 (inclusive)
 let range = 12;
-if(range>=10 && range<=20){
+if (range >= 10 && range <= 20) {
     console.log(range + " is within the range 10 to 20.");
 }
-else{
+else {
     console.log(range + " is outside the range 10 to 20.");
 }
 // Program 18: Calculate the area based on the shape type
 let shape = "circle";
 let area = 0;
 if (shape === "circle") {
- let radius = 5;
- area = Math.PI * radius * radius;
- console.log("Area of the circle is: " + area.toFixed(2));
+    let radius = 10;
+    area = 22.7 * radius * radius;
+    console.log("Area of the circle is: " + area);
 } else if (shape === "rectangle") {
- let length = 10;
- let width = 4;
- area = length * width;
- console.log("Area of the rectangle is: " + area);
+    let length = 5;
+    let width = 7;
+    area = length * width;
+    console.log("Area of the rectangle is: " + area);
 } else {
- console.log("Shape not recognized.");
+    console.log("Give proper shape name..");
 }
-
 
 // Program 19: Verify user login with username and password
 let inputUsername = "komal2332";
 let inputPassword = "k@5572";
 if (inputUsername === "komal2332" && inputPassword === "k@5572") {
- console.log("User login successful.");
-} 
+    console.log("User login successful.");
+}
 else {
- console.log("Invalid username or password.");
+    console.log("Invalid username or password.");
 }
 
-// Program 20: Check if a person meets multiple conditions for a special
-offer
+// Program 20: Check if a person meets multiple conditions for a special offer
 let customer_age = 30;
 let member_sts = true;
 let purchase_amount = 250;
 if (customer_age >= 25 && member_sts && purchase_amount >= 200) {
- console.log("Congratulations! You qualify for our special offer.");
+    console.log("Congratulations! You qualify for our special offer.");
 } else {
- console.log("Sorry, you do not qualify for the special offer.");
+    console.log("Sorry, you do not qualify for the special offer.");
 }
