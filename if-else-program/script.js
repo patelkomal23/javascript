@@ -256,9 +256,9 @@ if (shape === "circle") {
 }
 
 // Program 19: Verify user login with username and password
-let inputUsername = "komal2332";
-let inputPassword = "k@5572";
-if (inputUsername === "komal2332" && inputPassword === "k@5572") {
+let userName = "komal2332";
+let pas = "k@5572";
+if (userName === "komal2332" && pas === "k@5572") {
     console.log("User login successful.");
 }
 else {
