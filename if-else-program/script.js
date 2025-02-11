@@ -284,6 +284,6 @@ while(i<=10){
     f=f1;
     f1=f+f2;
     f2=f;
-    document.write(f + ", ");
+    document.write(f + " ,");
     i++;
 }
