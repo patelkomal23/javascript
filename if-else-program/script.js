@@ -275,3 +275,15 @@ if (customer_age >= 25 && member_sts && purchase_amount >= 200) {
 } else {
     console.log("Sorry, you do not qualify for the special offer.");
 }
+
+
+
+//fibonacci series
+let f,f1=0,f2=1,i=1;
+while(i<=10){
+    f=f1;
+    f1=f+f2;
+    f2=f;
+    document.write(f + ", ");
+    i++;
+}
