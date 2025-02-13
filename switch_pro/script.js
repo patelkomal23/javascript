@@ -23,6 +23,8 @@
                     break;
                 case "mul":
                     document.getElementById('ans').value = parseInt(num1) * parseInt(num2);
+                case "div":
+                    document.getElementById('ans').value =  parseInt(num1) % parseInt(num2);
 
             }
         }
