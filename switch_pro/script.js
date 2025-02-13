@@ -2,7 +2,7 @@
         let num2;
         document.getElementById('result').classList.add('hidden');
         function printValue() {
-            console.log("hello");
+            // console.log("hello");
             num1 = document.getElementById("num1").value;
             num2 = document.getElementById("num2").value;
 
