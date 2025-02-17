@@ -31,18 +31,18 @@
 
 // 5) Closure nested function
 
-let num = 21;
-let printNum1=()=>{
-   let num =25;
-   let printNum2=()=>{
-       let num=30;
-       console.log("inner " + num); 
-   }
-   printNum2();
-   console.log("main "+ num);
-}
-printNum1();
-console.log("outer "+ num);
+// let num = 21;
+// let printNum1=()=>{
+//    let num =25;
+//    let printNum2=()=>{
+//        let num=30;
+//        console.log("inner " + num); 
+//    }
+//    printNum2();
+//    console.log("main "+ num);
+// }
+// printNum1();
+// console.log("outer "+ num);
 
 	
 // 6) factorial with  function
@@ -72,26 +72,8 @@ function multiplyBy(factor) {
    console.log(double(5)); 
 
 
- //  8) setTimeout(function(){
-//     let f,f1=0,f2=1;
-//     let i = 1;
-//     while(i<=5){
-//         f = f1;
-//         f1 = f + f2
-//         f2 = f;
-//         document.getElementById('ans').innerHTML += f;
-//         i++;
-//     }
-// },2000);
+ //  8)  Anonymous Functions
+setTimeout(function() {
+    console.log("Hello");
+   }, 2000);
 
-// 9) setInterval(function(){
-//     let f,f1=0,f2=1;
-//     let i = 1;
-//     while(i<=5){
-//         f = f1;
-//         f1 = f + f2
-//         f2 = f;
-//         document.getElementById('ans').innerHTML += f;
-//         i++;
-//     }
-// },5000);
