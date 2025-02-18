@@ -32,6 +32,23 @@
     // console.log(index);
 
     //map
+    // let user = [{
+    //     id: 1,
+    //     name: "komal",
+    //     email: "k123@gmail.com",
+    // },
+    // {
+    //     id: 2,
+    //     name: "Amita",
+    //     email: "a123@gmail.com",
+    // }
+    // ]
+    // user.map((user, index) => {
+    //     console.log(user);
+
+    // })
+
+    //filter
     let user = [{
         id: 1,
         name: "komal",
@@ -43,8 +60,8 @@
         email: "a123@gmail.com",
     }
     ]
-    user.map((user, index) => {
-        console.log(user);
-
-    })
+    let data = user.filter((user)=>user.name!="komal")
+    console.log(data);
+    
+    
 </script>
