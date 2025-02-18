@@ -1,37 +1,50 @@
 <script>
 
-//  forEach   
+    //  forEach   
     // let arr = [10,20,30,40,50];
     // arr.forEach((ele)=>{
     //     console.log(ele*2);
     // })
 
-// indexOf
+    // indexOf
     // let arr = [10,20,30,40,50]
     // let index = arr.indexOf(50);
     // console.log(index);
 
-//findIndex
+    //findIndex
     // let arr = [10,20,30,40,50]
     // let index = arr.findIndex((val)=> val===40);
     // console.log(index);
 
-// inclueds
+    // inclueds
     // let str ="komal";
     // let checkStr = str.includes('m');
     // console.log(checkStr);
 
-//some
+    //some
     // let arr = [10,20,30,40,50]
     // let index = arr.some((val)=> val===90);
     // console.log(index);
 
-//every
-    let arr = [10,20,30,40,50]
-    let index = arr.every((val)=> val>0);
-    console.log(index);
+    //every
+    // let arr = [10, 20, 30, 40, 50]
+    // let index = arr.every((val) => val > 0);
+    // console.log(index);
 
-//map
+    //map
+    let user = [{
+        id: 1,
+        name: "komal",
+        email: "k123@gmail.com",
+    },
+    {
+        id: 2,
+        name: "Amita",
+        email: "a123@gmail.com",
+    }
+    ]
+    user.map((user, index) => {
+        console.log(user);
 
-      
+    })
 </script>
