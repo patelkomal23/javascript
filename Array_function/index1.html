@@ -101,6 +101,26 @@
     const index = emps.findIndex(emp => emp.id === 2);
     console.log(index);
 
+    // Check If All Objects Have a Certain Property Using every()
+    const users1 = [
+        { name: "Alice", active: true },
+        { name: "Bob", active: true }
+    ];
+    console.log(users1.every(user => user.active));
+
+    // Check If At Least One Element Matches Condition Using some()
+    const orders = [
+        { orderId: 101, status: "Shipped" },
+        { orderId: 102, status: "Pending" }
+    ];
+    console.log(orders.some(order => order.status === "Pending"));
+
+    // Find Duplicates Using filter() and includes()
+    const numbers1 = [1, 2, 3, 2, 4, 5, 1];
+    const duplicates = numbers1.filter((num, index, self) => self.indexOf(num) !== index);
+    console.log(duplicates);
+
+
 
 
 </script>
