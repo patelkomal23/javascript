@@ -68,6 +68,66 @@
 // fruits.splice(2, 0, "Lemon", "Kiwi");
 // console.log(fruits);
 
+Array IndexOf
+
+let arr = [10, 20, 30, 40];
+console.log(arr.indexOf(30));
+
+15. Array LastIndexOf
+
+let arr = [10, 20, 30, 10, 40];
+console.log(arr.lastIndexOf(10));
+
+16. Array Some
+
+let numbers = [1, 2, 3, 4, 5];
+console.log(numbers.some(num => num > 3));
+
+17. Array Every
+
+let numbers = [2, 4, 6, 8];
+console.log(numbers.every(num => num % 2 === 0));
+
+18. Array Fill
+
+let arr = new Array(5).fill(0);
+console.log(arr);
+
+19. Array Join
+
+let arr = ["Hello", "World", "JavaScript"];
+console.log(arr.join(" - "));
+
+20. Array Includes
+
+let arr = [1, 2, 3, 4, 5];
+console.log(arr.includes(3));
+
+21. Array Flat
+
+let arr = [1, [2, 3], [4, 5]];
+console.log(arr.flat());
+
+22. Array CopyWithin
+
+let arr = [1, 2, 3, 4, 5];
+arr.copyWithin(1, 3);
+console.log(arr);
+
+// Array FindIndex
+let numbers = [10, 20, 30, 40];
+console.log(numbers.findIndex(num => num === 30));
+
+// // Array Entries
+// let arr = ['a', 'b', 'c'];
+// let iterator = arr.entries();
+// console.log(iterator.next().value);
+
+// //Array Keys
+// let arr = ['a', 'b', 'c'];
+// let iterator = arr.keys();
+// console.log(iterator.next().value);
+
 // Slice method
 // let arr = [50,60,70,80,90];
 // let array = arr.slice(0,3);
