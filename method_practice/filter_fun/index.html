@@ -39,8 +39,30 @@
     // ];
     // let ages = person.filter(per => per.age > 18);
     // console.log(ages);
-    
 
+    // 12. Filter words with more than 5 letters
+    // let words = ["apple", "banana", "cherry", "fig"];
+    // let letter = words.filter((word) => {
+    //     return word.length > 5;
+    // });
+    // console.log(letter);
+
+    // 13.Filter truthy values from an array
+    // let values = [0, 1, false, "hello", "", undefined, "world"];
+    // let truthyValues = values.filter(Boolean);
+    // console.log(truthyValues);
+
+    // 14.Filter prime numbers
+    let numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let isPrime = num => {
+        for (let i = 2; i < num; i++) {
+            if (num % i === 0)
+             return false;
+        }
+        return num > 1;
+    };
+    const primes = numbers.filter(isPrime);
+    console.log(primes);
 
 
 </script>
