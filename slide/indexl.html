@@ -10,17 +10,17 @@
 
 <body>
     <div class="slider">
-        <div class="slider-item d-none active">
+        <div class="slider-item d-none active fade">
+            <img src="./images/img.jpg" alt="">
+        </div>
+        <div class="slider-item d-none fade">
             <img src="./images/img1.jpg" alt="">
         </div>
-        <div class="slider-item d-none">
+        <div class="slider-item d-none fade">
             <img src="./images/img2.jpg" alt="">
         </div>
-        <div class="slider-item d-none">
-            <img src="./images/img3.jpg" alt="">
-        </div>
-        <button class="prev" onclick="currSide(-1)">Prev</button>
-        <button class="next">Next</button>
+        <button class="prev" onclick="currenSlide(-1)">Prev</button>
+        <button class="next" onclick="currenSlide(1)">Next</button>
     </div>
 
     <script src="./script/script.js"></script>
