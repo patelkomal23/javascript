@@ -24,12 +24,15 @@
         <button class="prev" onclick="currSlide(-1)"><i class="fa-solid fa-arrow-left"></i></button>
 
         <button class="next" onclick="currSlide(1)"><i class="fa-solid fa-arrow-right"></i></button>
-        <div class="indicator-container">
-            <span class="dot active-dot" onclick="setSlide(1)"></span>
-            <span class="dot" onclick="setSlide(2)"></span>
-            <span class="dot" onclick="setSlide(3)"></span>
+        <div class="indicator">
+            <span id="current-slide">1</span> / <span id="total-slide">5</span>
         </div>
-
+        <div class="dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      
     </div>
 
     <script src="./script/script.js"></script>
