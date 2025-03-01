@@ -1,6 +1,13 @@
 
 let slideIndex = 1;
 //   console.log(slideItem[0]);
+let dots = document.querySelectorAll(".dot");
+let setSlide =(n)=>{
+  slideIndex=n;
+  displaySlide(slideIndex);
+
+};
+
 
 let currSlide = (n) => {
   displaySlide((slideIndex += n));
@@ -22,6 +29,14 @@ let displaySlide = (n) => {
     slideItem[i].classList.remove("active");
   }
   slideItem[slideIndex - 1].classList.add("active");
+
+dots.forEach((dot) => dot.classList.remove("active-dot"));
+dots[slideIndex - 1].classList.add("active-dot");
 };
 
-displaySlide(slideIndex);
+
+setInterval(() => {
+      currSlide(1);
+  
+  }, 5000);
+  
