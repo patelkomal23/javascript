@@ -5,6 +5,7 @@ This image slider is a simple yet effective JavaScript-based carousel that cycle
 
 ## Features
 - Automatic sliding with a 2-second interval.
+
 - Manual navigation using left and right arrows.
 - Dots for direct image selection.
 - Smooth fade transition between images.
