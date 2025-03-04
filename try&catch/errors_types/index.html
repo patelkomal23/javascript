@@ -46,16 +46,23 @@
             throw new Error("Division by zero is not allowed");            
         }
         return a/b;
-        
     }
     try {
         console.log(divide(10, 0));
         
-        
     } catch (error) {
-        console.log("Exception: ", error.message);
-        
+        console.log("Exception: ", error.message);  
     }
 
+    // 5. Try-Catch Inside a Function
 
+function riskyFunction() {
+    try {
+        throw new Error("Something went wrong");
+    } catch (error) {
+        console.log("Caught an error in function:", error.message);
+    }
+}
+
+riskyFunction();
 </script>
