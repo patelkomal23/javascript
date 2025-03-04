@@ -107,4 +107,12 @@
     } catch (error) {
         console.log(`${error.name}: ${error.message}`);
     }
+
+    // 10. Using Try-Catch with JSON Parsing
+
+    try {
+        let data = JSON.parse("{invalidJson}");
+    } catch (error) {
+        console.log("Invalid JSON format:", error.message);
+    }
 </script>
