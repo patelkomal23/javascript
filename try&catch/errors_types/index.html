@@ -39,30 +39,30 @@
     } finally {
         console.log("finally block Executed");
     }
-    
+
     // 4 Division by zero exception
-    function divide(a,b) {
-        if(b===0){
-            throw new Error("Division by zero is not allowed");            
+    function divide(a, b) {
+        if (b === 0) {
+            throw new Error("Division by zero is not allowed");
         }
-        return a/b;
+        return a / b;
     }
     try {
         console.log(divide(10, 0));
-        
+
     } catch (error) {
-        console.log("Exception: ", error.message);  
+        console.log("Exception: ", error.message);
     }
 
     // 5. Try-Catch Inside a Function
 
-function riskyFunction() {
-    try {
-        throw new Error("Something went wrong");
-    } catch (error) {
-        console.log("Caught an error in function:", error.message);
+    function riskyFunction() {
+        try {
+            throw new Error("Something went wrong");
+        } catch (error) {
+            console.log("Caught an error in function:", error.message);
+        }
     }
-}
 
-riskyFunction();
+    riskyFunction();
 </script>
