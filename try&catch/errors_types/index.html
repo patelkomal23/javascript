@@ -11,12 +11,51 @@
     }
 
     // 1. Basic Try-Catch Example
- try {
-    throw ""
+    try {
+        throw "An error occurred";
+
+    } catch (error) {
+        console.log("Caught error:", error);
+    }
+
+    // 2 Handling Multiplr Exception
+
+    try {
+        let num = parseInt("ABC");
+        if (isNaN(num)) {
+            throw new Error("Invalid number format");
+        }
+    }
+    catch (error) {
+        console.log("Error: ", error.message);
+    }
+
+    // 3 uding finally block
+    try {
+        console.log("Executing try block");
+
+    } catch (error) {
+        console.log("Error caught");
+    } finally {
+        console.log("finally block Executed");
+    }
     
- } catch (error) {
-    
- }
+    // 4 Division by zero exception
+    function divide(a,b) {
+        if(b===0){
+            throw new Error("Division by zero is not allowed");            
+        }
+        return a/b;
+        
+    }
+    try {
+        console.log(divide(10, 0));
+        
+        
+    } catch (error) {
+        console.log("Exception: ", error.message);
+        
+    }
 
 
 </script>
