@@ -4,22 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dom</title>
+    <style>
+        button {
+            padding: 10px;
+            background-color: bisque;
+            cursor: pointer;
+        }
+
+        #block {
+            margin: 20px;
+        }
+    </style>
 </head>
 
 <body>
     <div class="main-content">
-        <h2 id="title">Hello, goood morning</h2>
+        <h2 id="title">Hello..</h2>
+        <button id="btn">Click</button>
+        <div id="block">Mouseover</div>
     </div>
 
+
     <script>
-        // let title = document.getElementById('title');
+        // let title=document.getElementById('title');
         // console.log(title.textContent);
-        let title=document.querySelector('.main-cotent, #title');
-        console.log(title.innerHTML);
+
+        // let title=document.querySelector('#title');
+        // console.log(title.innerHTML);
+
+        //Click Event
+        document.getElementById('btn').addEventListener("click", function () {
+            alert("Button clicked!!");
+        });
+
+        //mouseover event
+        document.getElementById('block').addEventListener("mouseover", function () {
+            console.log("Mouse hovered over the div!");
+        });
+
+
+
+
+
+
+
+
 
     </script>
-
 </body>
 
 </html>
