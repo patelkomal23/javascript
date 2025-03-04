@@ -73,4 +73,12 @@
     } catch (error) {
         console.log("Caught an error:", error.message);
     }
+
+    // 7. Catching TypeErrors
+    try {
+        let obj = null;
+        console.log(obj.name);
+    } catch (error) {
+        console.log("Caught TypeError:", error.message);
+    }
 </script>
