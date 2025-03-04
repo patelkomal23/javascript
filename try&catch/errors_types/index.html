@@ -81,4 +81,16 @@
     } catch (error) {
         console.log("Caught TypeError:", error.message);
     }
+
+    // 8. Nested Try-Catch
+    try {
+        try {
+            throw new Error("Inner error");
+        } catch (innerError) {
+            console.log("Inner catch:", innerError.message);
+            throw new Error("Outer error");
+        }
+    } catch (outerError) {
+        console.log("Outer catch:", outerError.message);
+    }
 </script>
