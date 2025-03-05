@@ -41,12 +41,12 @@
                         <label for="gender" class="form-label">Gender</label>
 
                         <div class="form-check form-check-inline">
-                            <label class="form-check-label" id="gender" for="gender1">Male</label>
-                            <input type="radio" class="form-check-input ms-3" id="gender1">
+                            <label class="form-check-label"  for="gender1">Male</label>
+                            <input type="radio" class="form-check-input ms-3" name="gender"id="gender1">
                         </div>
                         <div class="form-check form-check-inline">
-                            <label class="form-check-label" id="gender" for="gender2">Female</label>
-                            <input type="radio" class="form-check-input" id="gender2">
+                            <label class="form-check-label"  for="gender2">Female</label>
+                            <input type="radio" class="form-check-input" name="gender" id="gender2">
                             <span class="d-none genderError text-danger"> gender is required</span>
 
                         </div>
@@ -69,11 +69,11 @@
         let username = document.getElementById('username');
         let email = document.getElementById('email');
         let password = document.getElementById('password');
-        let gender = document.querySelectorAll("input[nmae='gender']")
+        let gender = document.querySelectorAll("input[name='gender']");
 
         let validate = () => {
-            console.log(gender.checked[0]);
-            console.log(gender.checked[1]);
+            // console.log(gender.checked[0]);
+            // console.log(gender.checked[1]);
 
             // username
             if (username.value.trim() === "") {
@@ -102,11 +102,11 @@
 
             // gender
             if (!gender[0].checked || !gender[1].checked) {
-                document.querySelector('.genderdError').classList.remove('d-none')
+                document.querySelector('.genderError').classList.remove('d-none')
 
             }
             else {
-                document.querySelector('.genderdError').classList.add('d-none')
+                document.querySelector('.genderError').classList.add('d-none')
 
             }
         }
