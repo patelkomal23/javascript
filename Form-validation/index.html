@@ -16,17 +16,26 @@
         <div class="col-md-6">
             <form action="" method="post" onsubmit="validate(); return false">
                 <h2>Sing-Up</h2>
+                <!-- username -->
                 <div class="mb-3">
                     <label for="username" class="form-label">username</label>
                     <input type="text" class="form-control" id="username">
                     <span class="d-none userError text-danger"> User name is required</span>
                    
                 </div>
+                <!-- email -->
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
                     <input type="text" class="form-control" id="email">
-                    <span class="d-none emailError text-danger"> User name is required</span>
+                    <span class="d-none emailError text-danger"> Email is required</span>
                 </div>
+                <!-- password -->
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password">
+                    <span class="d-none passwordError text-danger">Passowrd is required</span>
+                </div>
+                
                 <button class="btn btn-primary" type="submit">Submit</button>
             </form>
         </div>
@@ -52,6 +61,7 @@
         <script>
             let username =document.getElementById('username');
             let email =document.getElementById('email');
+            let password =document.getElementById('password');
 
             let validate=()=>{
                 if(username.value.trim()=== ""){
@@ -66,6 +76,13 @@
 
                 }else{
                     document.querySelector('.emailError').classList.add('d-none')
+
+                }
+                if(password.value.trim()=== ""){
+                    document.querySelector('.passwordError').classList.remove('d-none')
+
+                }else{
+                    document.querySelector('.passwordError').classList.add('d-none')
 
                 }
             }
