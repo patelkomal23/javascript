@@ -38,20 +38,32 @@
                     </div>
                     <!-- gender -->
                     <div class="mb-3">
-                        <label for="gender" class="form-label">Gender</label>
-
+                        <label class="form-label">Gender</label>
                         <div class="form-check form-check-inline">
-                            <label class="form-check-label"  for="gender1">Male</label>
-                            <input type="radio" class="form-check-input ms-3" name="gender"id="gender1">
+                            <label class="form-check-label" for="gender1">Male</label>
+                            <input type="radio" class="form-check-input ms-3" name="gender" id="gender1">
                         </div>
                         <div class="form-check form-check-inline">
-                            <label class="form-check-label"  for="gender2">Female</label>
+                            <label class="form-check-label" for="gender2">Female</label>
                             <input type="radio" class="form-check-input" name="gender" id="gender2">
-                            <span class="d-none genderError text-danger"> gender is required</span>
-
                         </div>
+                        <span class="d-none genderError text-danger"> Gender is required</span>
                     </div>
+                    <!-- hobby -->
+                    <div class="mb-3">
+                        <label class="form-label">Hobby</label>
 
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label" for="hobby1">Cooking</label>
+                            <input class="form-check-input ms-3"  name="hobby" type="checkbox" value="" id="hobby1">
+                        </div> 
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label" for="hobby2">Garding</label>
+                            <input class="form-check-input"  name="hobby" type="checkbox" value="" id="hobby2">
+                        </div>
+                        <span class="d-none hobbyError text-danger"> Hobby is required</span>
+
+                    </div>
                     <button class="btn btn-primary" type="submit">Submit</button>
                 </form>
             </div>
@@ -70,6 +82,7 @@
         let email = document.getElementById('email');
         let password = document.getElementById('password');
         let gender = document.querySelectorAll("input[name='gender']");
+        let hobby = document.querySelectorAll("input[name='hobby']");
 
         let validate = () => {
             // console.log(gender.checked[0]);
@@ -101,12 +114,20 @@
             }
 
             // gender
-            if (!gender[0].checked || !gender[1].checked) {
+            if (!gender[0].checked && !gender[1].checked) {
                 document.querySelector('.genderError').classList.remove('d-none')
 
             }
             else {
                 document.querySelector('.genderError').classList.add('d-none')
+
+            }
+            if (!hobby[0].checked && !hobby[1].checked) {
+                document.querySelector('.hobbyError').classList.remove('d-none')
+
+            }
+            else {
+                document.querySelector('.hobbyError').classList.add('d-none')
 
             }
         }
