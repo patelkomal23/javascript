@@ -14,14 +14,20 @@
  <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <form action="" method="post" onsubmit="return false">
+            <form action="" method="post" onsubmit="validate(); return false">
                 <h2>Sing-Up</h2>
                 <div class="mb-3">
                     <label for="username" class="form-label">username</label>
                     <input type="text" class="form-control" id="username">
-                    <span class="d-none userError"> User name is required</span>
+                    <span class="d-none userError text-danger"> User name is required</span>
+                   
                 </div>
-                <button class="btn btn-primary">Submit</button>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="email">
+                    <span class="d-none emailError text-danger"> User name is required</span>
+                </div>
+                <button class="btn btn-primary" type="submit">Submit</button>
             </form>
         </div>
     </div>
@@ -44,7 +50,25 @@
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
         <script>
-            let username =document.getElementById('.username');
+            let username =document.getElementById('username');
+            let email =document.getElementById('email');
+
+            let validate=()=>{
+                if(username.value.trim()=== ""){
+                    document.querySelector('.userError').classList.remove('d-none')
+
+                }else{
+                    document.querySelector('.userError').classList.add('d-none')
+
+                }
+                if(email.value.trim()=== ""){
+                    document.querySelector('.emailError').classList.remove('d-none')
+
+                }else{
+                    document.querySelector('.emailError').classList.add('d-none')
+
+                }
+            }
 
         </script>
 </body>
