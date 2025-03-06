@@ -64,6 +64,12 @@
                         <span class="d-none hobbyError text-danger"> Hobby is required</span>
 
                     </div>
+                    <!-- date -->
+                    <div class="mb-3">
+                        <label for="dob" class="form-label">Date of Birth</label>
+                        <input type="date" class="form-control" id="dob">
+                        <span class="d-none dobError text-danger">Date of birth is required</span>
+                    </div>
                     <button class="btn btn-primary" type="submit">Submit</button>
                 </form>
             </div>
@@ -83,6 +89,8 @@
         let password = document.getElementById('password');
         let gender = document.querySelectorAll("input[name='gender']");
         let hobby = document.querySelectorAll("input[name='hobby']");
+        let dob = document.getElementById('dob');
+
 
         let validate = () => {
             // console.log(gender.checked[0]);
