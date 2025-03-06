@@ -21,7 +21,7 @@
                     <div class="col"><button class="btn btn-primary w-100">7</button></div>
                     <div class="col"><button class="btn btn-primary w-100">8</button></div>
                     <div class="col"><button class="btn btn-primary w-100">9</button></div>
-                    <div class="col"><button class="btn btn-primary w-100">c</button></div>
+                    <div class="col"><button class="btn btn-primary w-100">C</button></div>
 
                     <div class="col"><button class="btn btn-primary w-100">4</button></div>
                     <div class="col"><button class="btn btn-primary w-100">5</button></div>
@@ -51,7 +51,16 @@
 
         buttons.forEach((button)=>{
             button.addEventListener('click',(e)=>{
-                let valu
+                let value=e.target.innerText;
+                if(value=='='){
+                    display.value=eval(display.value);
+                }
+                else if(value=='C'){
+                    display.value='';
+                }
+                else{
+                    display.value+=value;
+                }
             })
         })
     </script>
