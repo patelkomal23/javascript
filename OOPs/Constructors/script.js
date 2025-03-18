@@ -10,4 +10,4 @@ class Demo{
 let obj=new Demo();
 obj.print();
 
-//
+//                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
