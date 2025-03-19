@@ -17,38 +17,52 @@
 
 //Parameterized Constructor
 
-class B{
-    constructor(name, age){
-        this.name = name;
-        this.age = age;
-    }
-    set(name,age){
-        this.name = name;
-        this.age = age;
-    }
-    get(){
-        console.log("Name: "+this.name);
-        console.log("Age: "+this.age);
+// class B{
+//     constructor(name, age){
+//         this.name = name;
+//         this.age = age;
+//     }
+//     set(name,age){
+//         this.name = name;
+//         this.age = age;
+//     }
+//     get(){
+//         console.log("Name: "+this.name);
+//         console.log("Age: "+this.age);
         
-    }
-}
-let obj = new B("komal", 23);
-obj.get();
+//     }
+// }
+// let obj = new B("komal", 23);
+// obj.get();
 
 //Copy Constructor
-class Info {
-        constructor(name, age) {
-            this.name = name;
-            this.age = age;
-        }
-        copy() {
-            return new Info(this.name, this.age);
-        }
-    }
+// class Info {
+//         constructor(name, age) {
+//             this.name = name;
+//             this.age = age;
+//         }
+//         copy() {
+//             return new Info(this.name, this.age);
+//         }
+//     }
     
-    let obj1 = new Info("Amita", 42);
-    let obj2 = obj1.copy();
-    console.log(obj2.name); 
-    console.log(obj2.age);
+//     let obj1 = new Info("Amita", 42);
+//     let obj2 = obj1.copy();
+//     console.log(obj2.name); 
+//     console.log(obj2.age);
 
 //Static Constructor
+class Data {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    static Default() {
+        return new Data("neel",28);
+    }
+}
+
+let obj = Data.Default();
+console.log(obj.name);
+console.log(obj.age);
