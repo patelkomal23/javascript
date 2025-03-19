@@ -1,24 +1,24 @@
-class Dsa{
-    topics(){
+class Phone{
+    features(){
         
-        console.log("Welcome to Data Structures..");
+        console.log("Welcome to phones..");
     }
 }
-class Stack{
-    topics(){
-        console.log("LIFO & FIFIO");
+class Apple{
+    features(){
+        console.log("Camera Quality");
     }
 }
-class Queue{
-    topics(){
-        console.log("Enqueue & Dequeue");
+class Samsung{
+    features(){
+        console.log("Zooming features");
     }
 }
-class Array{
-    topics(){
-        console.log("1D and 2D");
+class Jio{
+    features(){
+        console.log("Low price");
     }
 }
 
-let types=[new Dsa(),new Stack(),new Queue(),new Array()];
-types.forEach(Dsa=>Dsa.topics());
+let types=[new Phone(),new Apple(),new Samsung(),new Jio()];
+types.forEach(Phone=>Phone.features());
