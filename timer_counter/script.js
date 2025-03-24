@@ -9,8 +9,17 @@ const startTimer = () => {
             clearInterval(id);
             return;
         }
-         time--;
-         document.getElementById('time').textContent= time>9?time: '0'+time
+        time--;
+        document.getElementById('time').textContent = time > 9 ? time : '0' + time;
 
-    },1000)
+    }, 1000)
+}
+const stopTimer = () => {
+    clearInterval(id);
+}
+
+const resetTimer =()=>{
+    clearInterval(id);
+    time = 60;
+    document.getElementById('time').textContent = time ;
 }
