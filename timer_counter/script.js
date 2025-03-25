@@ -11,7 +11,7 @@ const startTimer = () => {
         }
         time--;
         document.getElementById('time').textContent = time > 9 ? time : '0' + time;
-
+                      
     }, 1000)
 }
 const stopTimer = () => {
