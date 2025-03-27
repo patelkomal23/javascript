@@ -14,7 +14,12 @@ form.addEventListener('submit', (event) => {
         email: email.value,
         password: password.value,
     }
-    users.push(obj);
+    if (editid == -1) {
+        users.push(obj);
+    }
+    else {
+
+    }
     username.value = " ";
     email.value = " ";
     password.value = " ";
@@ -41,17 +46,17 @@ let display = () => {
 
     })
 }
-let deleteData=(index)=>{
-    users.splice(index,1);
+let deleteData = (index) => {
+    users.splice(index, 1);
     display();
 }
-let editData=(index)=>{
-    let user = users.filter((_,idx)=>idx==index)[0];
-    username.value =user.username;
-    email.value =user.email;
-    password.value =user.password;
+let editData = (index) => {
+    let user = users.filter((_, idx) => idx == index)[0];
+    username.value = user.username;
+    email.value = user.email;
+    password.value = user.password;
 
-    btn.innerText="Update";
+    btn.innerText = "Update";
     btn.classList.remove('btn-secondary');
     btn.classList.add('btn-primary');
 
