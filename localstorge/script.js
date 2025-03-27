@@ -18,7 +18,12 @@ form.addEventListener('submit', (event) => {
         users.push(obj);
     }
     else {
+         users[editid] =obj ;
+         editid =-1
 
+         btn.innerText = "submit";
+         btn.classList.add('btn-secondary');
+         btn.classList.remove('btn-primary');
     }
     username.value = " ";
     email.value = " ";
@@ -59,6 +64,7 @@ let editData = (index) => {
     btn.innerText = "Update";
     btn.classList.remove('btn-secondary');
     btn.classList.add('btn-primary');
+    editid=index;
 
 
 
