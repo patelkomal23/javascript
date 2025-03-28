@@ -16,18 +16,51 @@
                 <h1>Registration From</h1>
                 <form method="post" id="form">
                     <div class="mb-3">
-                        <label for="username" id="form-label">User Name</label>
+                        <label for="username" id="form-label fw-bold">User Name</label>
                         <input type="text" name="username" id="username" class="form-control">
                     </div>
                     <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
+                        <label for="email" class="form-label fw-bold">Email</label>
                         <input type="text" class="form-control" id="email">
                     </div>
                     <div class="mb-3">
-                        <label for="password" id="form-label">Passowrd</label>
+                        <label for="password" id="form-label fw-bold">Passowrd</label>
                         <input type="text" name="password" id="password" class="form-control">
                     </div>
-                    <button id="btn" class="btn btn-secondary">Submit</button>
+                    <label class="form-label fw-bold">Gender</label>
+                    <div class="mb-3">
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label" for="gender1">Male</label>
+                            <input type="radio" class="form-check-input " name="gender" id="gender1">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label" for="gender2">Female</label>
+                            <input type="radio" class="form-check-input" name="gender" id="gender2">
+                        </div>
+                    </div>
+                    <label class="form-label fw-bold">Hobby</label>
+                    <div class="mb-3">
+
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label" for="hobby1">Cooking</label>
+                            <input class="form-check-input " name="hobby" type="checkbox" value="" id="hobby1">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label" for="hobby2">Garding</label>
+                            <input class="form-check-input" name="hobby" type="checkbox" value="" id="hobby2">
+                        </div>
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="city" class=" form-label fw-bold">City</label>
+                        <select class="form-select" id="city" aria-label="Default select example">
+                            <option selected disabled>Select City</option>
+                            <option value="1">Navsari</option>
+                            <option value="2">Surat</option>
+                            <option value="3">Mumbai</option>
+                          </select>
+                    </div>
+                    <button id="btn" class="btn btn-success">Submit</button>
                 </form>
             </div>
         </div>
