@@ -45,6 +45,8 @@ let display = () => {
             <td>${obj.username}</td>
             <td>${obj.email}</td>
             <td>${obj.password}</td>
+            <td>${obj.gender}</td>
+            <td>${obj.hobby}</td>
             <td>
             <button class="btn btn-danger " onclick="deleteData(${index})">Delete</button>
             <button class="btn btn-warning"  onclick="editData(${index})">Edit</button>
