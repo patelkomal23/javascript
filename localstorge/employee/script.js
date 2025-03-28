@@ -1,18 +1,18 @@
-let firstname = document.getElementById("firstname");
-let lastname = document.getElementById("lastname");
-let grid = document.getElementById("grid");
+let ename = document.getElementById("ename");
+let department = document.getElementById("department");
+let salary = document.getElementById("salary");
 let form = document.getElementById("form");
 let data = document.querySelector("#table tbody")
 let users = [];
 let btn = document.getElementById("btn");
 let editid = -1
-firstname.focus();
+ename.focus();
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     let obj = {
-        firstname: firstname.value,
-        lastname: lastname.value,
-        grid: grid.value,
+        ename: ename.value,
+        department: department.value,
+        salary: salary.value,
     }
     if (editid == -1) {
         users.push(obj);
@@ -25,10 +25,10 @@ form.addEventListener('submit', (event) => {
          btn.classList.add('btn-secondary');
          btn.classList.remove('btn-primary');
     }
-    firstname.value = " ";
-    lastname.value = " ";
-    grid.value = " ";
-    firstname.focus();
+    ename.value = " ";
+    department.value = " ";
+    salary.value = " ";
+    ename.focus();
     display();
 })
 let display = () => {
@@ -39,9 +39,9 @@ let display = () => {
         row.innerHTML =
             `
             <td>${index + 1}</td>
-            <td>${obj.firstname}</td>
-            <td>${obj.lastname}</td>
-            <td>${obj.grid}</td>
+            <td>${obj.ename}</td>
+            <td>${obj.department}</td>
+            <td>${obj.salary}</td>
             <td>
             <button class="btn btn-danger " onclick="deleteData(${index})">Delete</button>
             <button class="btn btn-warning"  onclick="editData(${index})">Edit</button>
@@ -57,9 +57,9 @@ let deleteData = (index) => {
 }
 let editData = (index) => {
     let user = users.filter((_, idx) => idx == index)[0];
-    firstname.value = user.firstname;
-    lastname.value = user.lastname;
-    grid.value = user.grid;
+    ename.value = user.ename;
+    department.value = user.department;
+    salary.value = user.salary;
 
     btn.innerText = "Update";
     btn.classList.remove('btn-secondary');
