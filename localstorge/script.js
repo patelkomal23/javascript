@@ -1,36 +1,59 @@
 let username = document.getElementById("username");
 let email = document.getElementById("email");
 let password = document.getElementById("password");
-let gender = document.querySelectorAll("input[name='gender']");
-let hobby = document.querySelectorAll("input[name='hobby']");
-
 let form = document.getElementById("form");
-let data = document.querySelector("#table tbody")
+let data = document.querySelector("#table tbody");
+let update = document.getElementById('updt');
+let gender = document.querySelectorAll("input[type='radio']")
+let hobby = document.querySelectorAll("input[type='checkbox']")
+
+let edit = -1;
 let users = [];
-let btn = document.getElementById("btn");
-let editid = -1
 username.focus();
 form.addEventListener('submit', (event) => {
     event.preventDefault();
+    //gender
+    let genderValue = '';
+    if (gender[0].checked) {
+        genderValue = gender[0].value;
+    }
+    else {
+        genderValue = gender[1].value;
+    }
+
+    //hobby
+    let hobbyArr = [];
+    for (let i = 0; i < hobby.length; i++) {
+        if (hobby[i].checked) {
+            hobbyArr.push(hobby[i].value)
+
+        }
+    }
+
     let obj = {
         username: username.value,
         email: email.value,
         password: password.value,
+        gender: genderValue,
+        hobby: hobbyArr
     }
-    if (editid == -1) {
+    if (edit == -1) {
         users.push(obj);
     }
     else {
-         users[editid] =obj ;
-         editid =-1
+        users[edit] = obj;
+        edit = -1;
 
-         btn.innerText = "submit";
-         btn.classList.add('btn-secondary');
-         btn.classList.remove('btn-primary');
+        update.innerText = "Submit";
+        update.classList.remove('btn-primary');
+        update.classList.add('btn-info');
+
     }
     username.value = " ";
     email.value = " ";
     password.value = " ";
+    gender.value = " ";
+    hobby.value = " ";
     username.focus();
     display();
 })
@@ -40,6 +63,7 @@ let display = () => {
         let row = document.createElement('tr');
 
         row.innerHTML =
+
             `
             <td>${index + 1}</td>
             <td>${obj.username}</td>
@@ -47,31 +71,34 @@ let display = () => {
             <td>${obj.password}</td>
             <td>${obj.gender}</td>
             <td>${obj.hobby}</td>
+           
+            
             <td>
-            <button class="btn btn-danger " onclick="deleteData(${index})">Delete</button>
-            <button class="btn btn-warning"  onclick="editData(${index})">Edit</button>
-            </td>
-        `
+            <button class="btn btn-danger" onclick="deleteData(${index})">Delete</button>
+            <button class="btn btn-warning" onclick="editData(${index})">Edit</button>
+             </td>
+            `
         data.append(row);
 
     })
 }
+
 let deleteData = (index) => {
     users.splice(index, 1);
     display();
 }
+
 let editData = (index) => {
+    username.focus();
     let user = users.filter((_, idx) => idx == index)[0];
+
     username.value = user.username;
     email.value = user.email;
     password.value = user.password;
 
-    btn.innerText = "Update";
-    btn.classList.remove('btn-secondary');
-    btn.classList.add('btn-primary');
-    editid=index;
-
-
-
+    update.innerText = "Update";
+    update.classList.remove('btn-info');
+    update.classList.add('btn-primary');
+    edit = index;
 }
 display();
