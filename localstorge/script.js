@@ -20,9 +20,12 @@ form.addEventListener('submit', (event) => {
     let genderValue = '';
     if (gender[0].checked) {
         genderValue = gender[0].value;
+        gender[0].checked = false;
     }
     else {
         genderValue = gender[1].value;
+        gender[1].checked = false;
+
     }
 
     //hobby
@@ -30,6 +33,16 @@ form.addEventListener('submit', (event) => {
     for (let i = 0; i < hobby.length; i++) {
         if (hobby[i].checked) {
             hobbyArr.push(hobby[i].value)
+
+        }
+        if (hobby[0].checked) {
+
+            hobby[0].checked = false;
+        }
+        else {
+            hobbyValue = hobby[1].value;
+            hobby[1].checked = false;
+    
         }
     }
 
@@ -40,6 +53,7 @@ form.addEventListener('submit', (event) => {
 
       if (city[i].selected) {
         cityValue.push(city[i].value);
+        
 
       }
     }    
@@ -69,8 +83,6 @@ form.addEventListener('submit', (event) => {
     username.value = " ";
     email.value = " ";
     password.value = " ";
-    gender.value = " ";
-    hobby.value = " ";
     username.focus();
     display();
 })
