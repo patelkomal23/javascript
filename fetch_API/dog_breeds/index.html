@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>dog breeds</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+        <style>
+            body {
+                background-color: #f8f9fa;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+        
+            .container {
+                text-align: center;
+            }
+        
+            #breeds {
+                width: 100%;
+                padding: 10px;
+                border-radius: 10px;
+                border: 1px solid #ced4da;
+                font-size: 1.1rem;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                background-color: #ffffff;
+            }
+        
+            img {
+                max-width: 100%;
+                border-radius: 15px;
+                border: 4px solid #dee2e6;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                transition: transform 0.3s ease;
+            }
+        
+            img:hover {
+                transform: scale(1.03);
+            }
+        
+            .row {
+                margin-top: 20px;
+            }
+        
+            .col-md-4 {
+                margin-bottom: 30px;
+            }
+        </style>
+        
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center mb-5 mt-5">
+            <div class="col-md-4">
+                <select onchange="display()" name="breeds" id="breeds">  </select>
+
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <img id="img" src="https://images.dog.ceo/breeds/affenpinscher/n02110627_12070.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+<script>
+let breeds=document.getElementById('breeds');
+let img=document.getElementById('img');
+
+fetch('https://dog.ceo/api/breeds/list/all')
+.then((response)=>{
+    return response.json();
+})
+.then((data)=>{
+    let breedList=Object.keys(data.message);
+    breedList.forEach((breed)=>{
+        let option=document.createElement('option');
+        option.value=breed;
+        option.innerText=breed;
+        breeds.append(option);
+    })
+})
+.catch((error)=>{
+    console.log(error); 
+})
+
+const display=()=>{
+    let breedSelect=document.getElementById('breeds').value;
+    fetch(`https://dog.ceo/api/breed/${breedSelect}/images/random`)
+    .then((response)=>{
+        return response.json();
+    })
+    .then((data)=>{
+        img.src=data.message;
+    })
+    .catch((error)=>{
+        console.log(error);
+    })
+
+}
+
+</script>
+</body>
+
+</html>
