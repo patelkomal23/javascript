@@ -6,8 +6,9 @@ async function fetchProducts() {
     const products = await response.json();
     displayProducts(products);
   } catch (error) {
-   console.log(error);
-   
+    console.error('Fetch error:', error);
+    document.getElementById('product-list').innerHTML =
+      '<div class="alert alert-danger">Failed to load products.</div>';
   }
 }
 
